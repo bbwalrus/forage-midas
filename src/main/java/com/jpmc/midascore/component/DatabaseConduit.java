@@ -1,5 +1,6 @@
 package com.jpmc.midascore.component;
 
+import com.jpmc.midascore.entity.TransactionRecord;
 import com.jpmc.midascore.entity.UserRecord;
 import com.jpmc.midascore.repository.UserRepository;
 import org.springframework.stereotype.Component;
@@ -16,4 +17,11 @@ public class DatabaseConduit {
         userRepository.save(userRecord);
     }
 
+    public UserRecord findById(long id) {
+        return userRepository.findById(id);
+    }
+
+    public void saveTransaction(TransactionRecord transactionRecord) {
+        // Implementation for saving transaction records
+    }
 }
